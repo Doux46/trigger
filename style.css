@@ -3,17 +3,16 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-.container {
-    margin: 0px 166px;
-}
-
 .header {
     background-image: url(image/bg.jpg);
     height: 100vh;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5)
+    background-position: center;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    background-attachment: fixed;
 }
+
 
 .header-line {
     padding-top: 50px;
@@ -432,19 +431,17 @@ body {
     margin-left: 1200px;
 }
 
-/* Контейнер каталога, оборачивающий все три товара */
 .catalog-container {
     display: flex;
-    justify-content: space-between; /* или center, или space-around */
-    gap: 20px; /* расстояние между товарами */
-    flex-wrap: nowrap; /* не переносим на новую строку на больших экранах */
-    max-width: 960px; /* или ширина контейнера */
-    margin: 0 auto; /* центрируем контейнер */
+    justify-content: space-between;
+    gap: 20px; 
+    flex-wrap: nowrap;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-/* Каждый товар */
 .catalog-item {
-    flex: 0 0 30%; /* занимает примерно 30% ширины контейнера */
+    flex: 0 0 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -470,31 +467,28 @@ body {
     text-align: center;
 }
 
-/* Адаптивность: на планшетах и телефонах переносим в колонку */
+
 @media (max-width: 991px) {
     .catalog-container {
-        flex-wrap: wrap; /* разрешаем перенос */
+        flex-wrap: wrap; 
         justify-content: center;
         gap: 20px;
     }
 
     .catalog-item {
-        flex: 0 0 90%; /* почти на всю ширину */
+        flex: 0 0 90%; 
         max-width: 300px;
         margin-bottom: 20px;
     }
 }
 
-
-/* Мобильные и планшетные экраны */
-/* Мобильные и планшетные экраны */
 @media (max-width: 991px) {
     .container {
         margin: 0 20px;
     }
 
     .header {
-        height: auto;
+        height: 100vh;
         padding: 20px 0;
         background-position: center;
         background-size: cover;
@@ -503,7 +497,7 @@ body {
     .header-line {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px; /* Отступ между элементами */
+        gap: 15px;
         padding: 0 10px;
     }
 
@@ -523,7 +517,7 @@ body {
     .nav-item {
         font-size: 14px;
         margin: 5px 8px;
-        white-space: nowrap; /* предотвращает перенос текста */
+        white-space: nowrap;
         color: white;
     }
 
@@ -602,7 +596,6 @@ body {
         background-color: rgb(155, 103, 7);
     }
 
-    /* Заголовок и подзаголовки */
     .header-title {
         position: static !important;
         margin: 40px auto 20px;
@@ -634,7 +627,6 @@ body {
         display: none;
     }
 
-    /* Изображение стула */
     .header-chair {
         margin: 20px auto 0;
         position: static !important;
@@ -647,12 +639,7 @@ body {
         margin: 40px 10px;
     }
 
-    .history-holder {
-        flex-direction: column !important;
-        align-items: center;
-        gap: 30px;
-        margin: 0 auto;
-    }
+  
 
     .history-info {
         max-width: 100%;
@@ -699,7 +686,6 @@ body {
         color: black;
     }
 
-    /* Изображения истории */
     .history-img {
         position: static !important;
         margin-top: 40px;
@@ -720,7 +706,6 @@ body {
         border-radius: 8px;
     }
 
-    /* Каталог */
     .header-cat-down {
         margin: 40px 0 100px;
         margin-left: 0;
@@ -779,7 +764,6 @@ body {
         display: block;
     }
 
-    /* Акции */
     .act-header {
         margin-top: 50px;
         display: flex;
@@ -849,7 +833,6 @@ body {
         color: rgb(204, 133, 0);
     }
 
-    /* Карта и контакты */
     .karta {
         margin: 40px auto 20px;
         border: 5px solid white;
@@ -877,7 +860,6 @@ body {
         margin: 5px 0;
     }
 
-    /* Форма обратной связи */
     .feedback {
         padding: 40px 20px;
     }
